@@ -30,6 +30,7 @@ class Perro(object):
         """Método que permite hacerlo ladrar"""
         print('Guau')
 
+
 class IGato(Interface):
     nombre = Attribute("""Nombre del gato""")
     def maullar(filename):
