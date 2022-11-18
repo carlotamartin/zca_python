@@ -14,15 +14,15 @@ class Adaptado2(object):
     pass
 '''
 
-from zope.interface import Interface, Attribute,  implements
+from zope.interface import Interface, Attribute,  implementer
 
 class IPerro(Interface):
     nombre = Attribute("""Nombre del perro""")
     def ladrar(filename):
         """Método que permite hacerlo ladrar"""
 
+@implementer(IPerro)
 class Perro(object):
-    implements(IPerro)
     nombre = 'u'
     def __init__(self, nombre):
         self.nombre = nombre
@@ -35,8 +35,8 @@ class IGato(Interface):
     def maullar(filename):
         """Método que permite hacerlo maullar"""
 
+@implementer(IGato)
 class Gato(object):
-    implements(IGato)
     nombre = u''
     def __init__(self, nombre):
         self.nombre = nombre
